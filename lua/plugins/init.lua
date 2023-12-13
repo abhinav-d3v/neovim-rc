@@ -251,6 +251,11 @@ local default_plugins = {
   {
     "olexsmir/gopher.nvim",
     ft = "go",
+    opts = {
+      gotag = {
+        transform = "camelcase",
+      },
+    },
     config = function(_, opts)
       require("gopher").setup(opts)
     end,
